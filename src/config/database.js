@@ -1,5 +1,5 @@
 module.exports = {
-  dialect: 'postgres'
+  dialect: 'postgres',
   host: 'localhost',
   username: 'postgres',
   password: 'docker',
@@ -7,6 +7,6 @@ module.exports = {
   define: {
     timestamps: true,
     underscored: true,
-    underscoredAll: true
-  }
+    underscoredAll: true,
+  },
 }
