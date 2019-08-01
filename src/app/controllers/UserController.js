@@ -1,4 +1,3 @@
-import { identity } from 'rxjs'
 import User from '../models/User'
 
 class UserController {
