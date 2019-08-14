@@ -201,6 +201,7 @@ INSERT INTO public."SequelizeMeta" VALUES ('20190810030258-create-appointments.j
 --
 
 INSERT INTO public.appointments VALUES (1, '2019-08-14 21:00:00+00', 9, 11, NULL, '2019-08-14 12:40:07.704+00', '2019-08-14 12:40:07.704+00');
+INSERT INTO public.appointments VALUES (2, '2019-08-15 21:00:00+00', 9, 11, NULL, '2019-08-14 13:06:58.764+00', '2019-08-14 13:06:58.764+00');
 
 
 --
@@ -225,7 +226,7 @@ INSERT INTO public.users VALUES (11, 'Douglas', 'douglas@gmail.com', '$2a$08$33R
 -- Name: appointments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.appointments_id_seq', 1, true);
+SELECT pg_catalog.setval('public.appointments_id_seq', 2, true);
 
 
 --
