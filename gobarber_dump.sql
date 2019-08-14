@@ -200,8 +200,16 @@ INSERT INTO public."SequelizeMeta" VALUES ('20190810030258-create-appointments.j
 -- Data for Name: appointments; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.appointments VALUES (1, '2019-08-14 21:00:00+00', 9, 11, NULL, '2019-08-14 12:40:07.704+00', '2019-08-14 12:40:07.704+00');
-INSERT INTO public.appointments VALUES (2, '2019-08-15 21:00:00+00', 9, 11, NULL, '2019-08-14 13:06:58.764+00', '2019-08-14 13:06:58.764+00');
+INSERT INTO public.appointments VALUES (3, '2019-08-15 21:00:00+00', 11, 11, NULL, '2019-08-14 19:54:52.698+00', '2019-08-14 19:54:52.698+00');
+INSERT INTO public.appointments VALUES (4, '2019-08-16 17:00:00+00', 11, 11, NULL, '2019-08-14 19:55:46.26+00', '2019-08-14 19:55:46.26+00');
+INSERT INTO public.appointments VALUES (5, '2019-08-16 18:00:00+00', 11, 11, NULL, '2019-08-14 19:57:30.433+00', '2019-08-14 19:57:30.433+00');
+INSERT INTO public.appointments VALUES (6, '2019-08-16 19:00:00+00', 11, 11, NULL, '2019-08-14 20:04:15.124+00', '2019-08-14 20:04:15.124+00');
+INSERT INTO public.appointments VALUES (7, '2019-08-16 20:00:00+00', 11, 11, NULL, '2019-08-14 20:05:25.995+00', '2019-08-14 20:05:25.995+00');
+INSERT INTO public.appointments VALUES (8, '2019-08-16 21:00:00+00', 11, 11, NULL, '2019-08-14 20:05:54.461+00', '2019-08-14 20:05:54.461+00');
+INSERT INTO public.appointments VALUES (9, '2019-08-16 22:00:00+00', 11, 11, NULL, '2019-08-14 20:07:42.683+00', '2019-08-14 20:07:42.683+00');
+INSERT INTO public.appointments VALUES (10, '2019-08-16 23:00:00+00', 11, 11, NULL, '2019-08-14 20:08:10.581+00', '2019-08-14 20:08:10.581+00');
+INSERT INTO public.appointments VALUES (11, '2019-08-17 00:00:00+00', 11, 11, NULL, '2019-08-14 20:08:54.909+00', '2019-08-14 20:08:54.909+00');
+INSERT INTO public.appointments VALUES (12, '2019-08-17 01:00:00+00', 11, 11, NULL, '2019-08-14 20:09:19.08+00', '2019-08-14 20:09:19.08+00');
 
 
 --
@@ -226,7 +234,7 @@ INSERT INTO public.users VALUES (11, 'Douglas', 'douglas@gmail.com', '$2a$08$33R
 -- Name: appointments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.appointments_id_seq', 2, true);
+SELECT pg_catalog.setval('public.appointments_id_seq', 12, true);
 
 
 --
