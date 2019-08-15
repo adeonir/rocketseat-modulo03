@@ -1,3 +1,47 @@
 [
-
+  {
+    "__v": 0,
+    "_id": "{\"$oid\":\"5d54a3cc95d1cb1d7a401cbd\"}",
+    "content": "New appointment from Douglas on August 16 at 11:00AM",
+    "createdAt": "{\"$date\":\"2019-08-15T00:14:04.369Z\"}",
+    "read": true,
+    "updatedAt": "{\"$date\":\"2019-08-15T01:15:18.455Z\"}",
+    "user": 11
+  },
+  {
+    "__v": 0,
+    "_id": "{\"$oid\":\"5d54a7701e8ed71e091c12ef\"}",
+    "content": "New appointment from Douglas on August 16 at 11:00 AM",
+    "createdAt": "{\"$date\":\"2019-08-15T00:29:36.631Z\"}",
+    "read": false,
+    "updatedAt": "{\"$date\":\"2019-08-15T00:29:36.631Z\"}",
+    "user": 9
+  },
+  {
+    "__v": 0,
+    "_id": "{\"$oid\":\"5d54a7851e8ed71e091c12f0\"}",
+    "content": "New appointment from Douglas on August 16 at 11:00 AM",
+    "createdAt": "{\"$date\":\"2019-08-15T00:29:57.378Z\"}",
+    "read": false,
+    "updatedAt": "{\"$date\":\"2019-08-15T00:29:57.378Z\"}",
+    "user": 11
+  },
+  {
+    "__v": 0,
+    "_id": "{\"$oid\":\"5d54cd153528012e3baf45f1\"}",
+    "content": "New appointment from Adeonir on August 16 at 11:00 AM",
+    "createdAt": "{\"$date\":\"2019-08-15T03:10:13. 72Z\"}",
+    "read": false,
+    "updatedAt": "{\"$date\":\"2019-08-15T03:10:13. 72Z\"}",
+    "user": 11
+  },
+  {
+    "__v": 0,
+    "_id": "{\"$oid\":\"5d54cd823528012e3baf45f2\"}",
+    "content": "New appointment from Adeonir on August 16 at 11:00 AM",
+    "createdAt": "{\"$date\":\"2019-08-15T03:12:02.357Z\"}",
+    "read": false,
+    "updatedAt": "{\"$date\":\"2019-08-15T03:12:02.357Z\"}",
+    "user": 11
+  }
 ]
