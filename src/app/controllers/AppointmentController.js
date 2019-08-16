@@ -101,6 +101,7 @@ class AppointmentController {
       content: `New appointment from ${user.name} on ${formatedDate}`,
       user: provider_id,
     })
+
     return res.json(appointment)
   }
 
