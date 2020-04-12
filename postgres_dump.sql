@@ -1,10 +1,10 @@
 -- -------------------------------------------------------------
--- TablePlus 2.3(222)
+-- TablePlus 2.10(268)
 --
 -- https://tableplus.com/
 --
 -- Database: gobarber
--- Generation Time: 2019-08-15 00:17:41.5570
+-- Generation Time: 2020-04-12 02:16:33.0670
 -- -------------------------------------------------------------
 
 
@@ -42,6 +42,15 @@ CREATE TABLE "public"."files" (
     PRIMARY KEY ("id")
 );
 
+DROP TABLE IF EXISTS "public"."SequelizeMeta";
+-- This script only contains the table creation statements and does not fully represent the table in the database. It's still missing: indices, triggers. Do not use it as a backup.
+
+-- Table Definition
+CREATE TABLE "public"."SequelizeMeta" (
+    "name" varchar(255) NOT NULL,
+    PRIMARY KEY ("name")
+);
+
 DROP TABLE IF EXISTS "public"."users";
 -- This script only contains the table creation statements and does not fully represent the table in the database. It's still missing: indices, triggers. Do not use it as a backup.
 
@@ -61,17 +70,18 @@ CREATE TABLE "public"."users" (
     PRIMARY KEY ("id")
 );
 
-INSERT INTO "public"."appointments" ("id", "date", "user_id", "provider_id", "canceled_at", "created_at", "updated_at") VALUES ('18', '2019-08-16 14:00:00+00', '11', '11', '2019-08-15 02:41:16.037+00', '2019-08-15 00:29:57.363+00', '2019-08-15 02:41:16.038+00'),
-('19', '2019-08-16 14:00:00+00', '9', '11', '2019-08-15 03:11:17.259+00', '2019-08-15 03:10:13.043+00', '2019-08-15 03:11:17.26+00'),
-('20', '2019-08-16 14:00:00+00', '9', '11', '2019-08-15 03:13:28.458+00', '2019-08-15 03:12:02.342+00', '2019-08-15 03:13:28.458+00');
+INSERT INTO "public"."appointments" ("id", "date", "user_id", "provider_id", "canceled_at", "created_at", "updated_at") VALUES ('1', '2020-04-16 21:00:00+00', '4', '3', NULL, '2020-04-12 04:05:35.716+00', '2020-04-12 04:05:35.716+00');
 
-INSERT INTO "public"."files" ("id", "name", "path", "created_at", "updated_at") VALUES ('4', 'men-1.jpg', 'b212f33ed2b558b4fc3dcdd861dc6669.jpg', '2019-08-14 11:42:04.342+00', '2019-08-14 11:42:04.342+00'),
-('5', 'man-2.jpg', '74a897fd662906e4cb3b88333dc0479b.jpg', '2019-08-14 11:42:13.135+00', '2019-08-14 11:42:13.135+00'),
-('6', 'woman-1.jpg', '838a5268accb27a9bfa873200438f17b.jpg', '2019-08-14 11:42:19.366+00', '2019-08-14 11:42:19.366+00');
+INSERT INTO "public"."files" ("id", "name", "path", "created_at", "updated_at") VALUES ('1', 'avatar-2020.jpg', '5ce58cc5718369014a6b5facdd84b715.jpg', '2020-04-11 21:53:50.904+00', '2020-04-11 21:53:50.904+00');
 
-INSERT INTO "public"."users" ("id", "name", "email", "password_hash", "provider", "created_at", "updated_at", "avatar_id") VALUES ('9', 'Adeonir', 'adeonir@gmail.com', '$2a$08$DYtsvPNbeCfro/FDLpw5Z.5vZ4N04q2wZzNtqeVJezvRYaW8yFlQ2', 'f', '2019-08-14 11:33:49.455+00', '2019-08-14 11:33:49.455+00', '4'),
-('10', 'Cassi', 'cassi@gmail.com', '$2a$08$DZ2sxRKstCiAFN80orHvqe.oRNVXINOqdi0chsWjZz.UOfhFhBcP.', 'f', '2019-08-14 11:33:59.791+00', '2019-08-14 11:33:59.791+00', '6'),
-('11', 'Douglas', 'douglas@gmail.com', '$2a$08$33RmySsPW/sl2oxUl6UvIOaMYCj0e8pAR.Yy8PnTlXnOAyK/a/ZcW', 't', '2019-08-14 11:34:12.859+00', '2019-08-14 11:34:12.859+00', '5');
+INSERT INTO "public"."SequelizeMeta" ("name") VALUES ('20190731105839-create-users.js'),
+('20190802115148-create-files.js'),
+('20190802121030-add-avatar-field-to-users.js'),
+('20190810030258-create-appointments.js'),
+('20200411155843-create-users.js');
+
+INSERT INTO "public"."users" ("id", "name", "email", "password_hash", "provider", "created_at", "updated_at", "avatar_id") VALUES ('3', 'Adeonir', 'adeonir@gmail.com', '$2a$08$1q/4JrmUGR1GMQ1PlFn4BuENSzT.j.eT7Q3.Lx9okHQfgKkab/BG6', 't', '2020-04-11 20:24:54.155+00', '2020-04-12 00:15:40.513+00', '1'),
+('4', 'Douglas', 'douglas@gmail.com', '$2a$08$qjPrUzibTNUCC6sOViwALe7KgeKBWvwS1EOQ0/XtTPLFMchof9qHO', 'f', '2020-04-12 04:03:24.348+00', '2020-04-12 04:03:24.348+00', NULL);
 
 ALTER TABLE "public"."appointments" ADD FOREIGN KEY ("provider_id") REFERENCES "public"."users"("id") ON DELETE SET NULL ON UPDATE CASCADE;
 ALTER TABLE "public"."appointments" ADD FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE SET NULL ON UPDATE CASCADE;

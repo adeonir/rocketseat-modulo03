@@ -5,24 +5,24 @@ import Appointment from '../models/Appointment'
 import User from '../models/User'
 
 class ScheduleController {
-  async index(req, res) {
+  async index(request, response) {
     const isProvider = await User.findOne({
       where: {
-        id: req.userId,
+        id: request.userId,
         provider: true,
       },
     })
 
     if (!isProvider) {
-      return res.status(401).json({ error: 'User is not a provider!' })
+      return response.status(401).json({ error: 'User is not a provider!' })
     }
 
-    const { date } = req.query
+    const { date } = request.query
     const parsedDate = parseISO(date)
 
     const appointments = await Appointment.findAll({
       where: {
-        provider_id: req.userId,
+        provider_id: request.userId,
         canceled_at: null,
         date: {
           [Op.between]: [startOfDay(parsedDate), endOfDay(parsedDate)],
@@ -31,7 +31,7 @@ class ScheduleController {
       order: ['date'],
     })
 
-    return res.json(appointments)
+    return response.json(appointments)
   }
 }
 

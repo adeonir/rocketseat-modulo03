@@ -2,34 +2,34 @@ import User from '../models/User'
 import Notification from '../schemas/Notification'
 
 class NotificationController {
-  async index(req, res) {
+  async index(request, response) {
     const isProvider = await User.findOne({
-      where: { id: req.userId, provider: true },
+      where: { id: request.userId, provider: true },
     })
 
     if (!isProvider) {
-      return res
+      return response
         .status(401)
         .json({ error: 'Only provider can load notifications!' })
     }
 
     const notifications = await Notification.find({
-      user: req.userId,
+      user: request.userId,
     })
       .sort({ createdAt: 'DESC' })
       .limit(20)
 
-    return res.json(notifications)
+    return response.json(notifications)
   }
 
-  async update(req, res) {
+  async update(request, response) {
     const notification = await Notification.findByIdAndUpdate(
-      req.params.id,
+      request.params.id,
       { read: true },
       { new: true }
     )
 
-    return res.json(notification)
+    return response.json(notification)
   }
 }
 
